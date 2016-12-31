@@ -1,5 +1,4 @@
 // Made by Hackcraft STEAM_0:1:50714411
-// Credits: JSharpe on Facepunch for the method and first version
 
 //if !SERVER then return end
 util.AddNetworkString("DriveonWaterChatMessage")
