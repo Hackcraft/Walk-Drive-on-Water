@@ -38,6 +38,18 @@ end
 function meta:CanWalkOnWater()
 	return canWater[self] != nil
 end
+
+concommand.Add("+walk_on_water", function(ply)
+	if IsValid(ply) and ply:IsSuperAdmin() then
+		ply:EnableCanWalkOnWater()
+	end
+end)
+
+concommand.Add("-walk_on_water", function(ply)
+	if IsValid(ply) and ply:IsSuperAdmin() then
+		ply:DisableCanWalkOnWater()
+	end
+end)
  
 function meta:DisableWaterEnt()
 	enabledEnt[self] = false
