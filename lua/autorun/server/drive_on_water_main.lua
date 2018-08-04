@@ -72,6 +72,18 @@ function meta:EnableWaterDrive()
 		end
 	end
 end
+	
+concommand.Add("+drive_on_water", function(ply)
+	if IsValid(ply) and ply:IsSuperAdmin() then
+		ply:EnableWaterDrive()
+	end
+end)
+
+concommand.Add("-drive_on_water", function(ply)
+	if IsValid(ply) and ply:IsSuperAdmin() then
+		ply:DisableWaterDrive()
+	end
+end)
 
 function meta:CanWaterDrive()
 	return enabledEnt[self] 
